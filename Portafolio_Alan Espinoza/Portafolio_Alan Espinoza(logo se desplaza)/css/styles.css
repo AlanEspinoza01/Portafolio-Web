@@ -1,0 +1,298 @@
+/* Estilo general del cuerpo del documento */
+body {
+    font-family: 'Comic Neue', cursive; /* Fuente del texto */
+    background-color: #0d0d0d; /* Fondo oscuro */
+    color: #fff; /* Color de texto blanco */
+    margin: 0; /* Quita los márgenes predeterminados del body */
+    padding: 0; /* Quita los rellenos predeterminados del body */
+}
+
+/* Estilo para la cabecera */
+header {
+    display: flex; /* Utiliza flexbox para el contenedor */
+    align-items: center; /* Alinea los ítems verticalmente al centro */
+    padding: 20px; /* Añade espacio interno al contenedor */
+    background-color: #1a1a1a; /* Color de fondo oscuro para el header */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el header */
+}
+
+/* Estilo para la imagen del logo dentro de la cabecera */
+.logo img {
+    width: 100px; /* Ancho de la imagen del logo */
+    height: 100px; /* Alto de la imagen del logo */
+    margin-right: 20px; /* Pone un margen a la derecha */
+    transition: transform 0.3s, top 0.3s, left 0.3s, margin 0.3s; /* Transición suave para transformaciones y posición */
+}
+
+.logo img.fijo {
+    position: fixed; /* Posición fija para que siga al usuario */
+    top: 10px; /* Espacio desde la parte superior */
+    left: 10px; /* Espacio desde la izquierda */
+    margin-right: 0; /* Elimina el margen derecho cuando está fijo */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+.logo img:hover {
+    transform: scale(2.8); /* Escala la imagen del logo cuando se pasa el ratón por encima */
+    margin-left: 80px; /* Asegura que haya espacio suficiente a la izquierda */
+    margin-right: 80px; /* Asegura que haya espacio suficiente a la derecha */
+    margin-top: 50px; /* Asegura que haya espacio suficiente arriba */
+    margin-bottom: 50px; /* Asegura que haya espacio suficiente abajo */
+}
+
+
+
+
+/* Estilo para la imagen del logo que sigue al usuario */
+#logo-seguir {
+    position: fixed; /* Posición fija para que siga al usuario */
+    top: 10px; /* Espacio desde la parte superior */
+    left: 10px; /* Espacio desde la izquierda */
+    width: 100px; /* Ancho de la imagen del logo */
+    height: 100px; /* Alto de la imagen del logo */
+    transition: transform 0.3s; /* Transición suave para transformaciones */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+#logo-seguir:hover {
+    transform: scale(1.5); /* Escala la imagen del logo cuando se pasa el ratón por encima */
+}
+
+
+
+/* Estilo para el contenedor de contacto */
+.contacto {
+    display: flex; /* Utiliza flexbox para el contenedor de contacto */
+    flex-direction: column; /* Ordena los elementos en columna */
+    color: white; /* Color del texto */
+}
+
+.contacto p {
+    margin: 5px 0; /* Espacio entre párrafos */
+}
+
+
+/* Estilo para el contenedor principal */
+main {
+    padding: 20px; /* Espacio interno para el contenedor principal */
+}
+
+/* Estilo general para las secciones */
+section {
+    margin-bottom: 20px; /* Espacio inferior para cada sección */
+    padding: 20px; /* Espacio interno para cada sección */
+    border-radius: 8px; /* Bordes redondeados para cada sección */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para cada sección */
+}
+
+/* Estilo para los encabezados de segundo nivel */
+h2 {
+    text-align: center; /* Centra el texto del encabezado */
+    margin-top: 40px; /* Margen superior */
+}
+
+/* Estilo para el slider y el carrusel */
+.slider, .carrusel {
+    position: relative; /* Posiciona relativo para los elementos hijos */
+    margin: auto; /* Centra el slider y el carrusel */
+    width: 80%; /* Ancho del 80% del contenedor */
+    overflow: hidden; /* Oculta el contenido que desborda */
+}
+
+/* Estilo para el contenido del slider */
+.slider-content {
+    display: flex; /* Utiliza un layout flex para el contenedor de contenido del slider */
+    transition: transform 0.5s ease; /* Transición suave para las transformaciones */
+}
+
+/* Estilo para cada diapositiva del slider */
+.slide {
+    min-width: 100%; /* Ancho mínimo del 100% del contenedor */
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño del elemento */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo para los botones de navegación del slider */
+.prev, .next {
+    cursor: pointer; /* Cambia el cursor a pointer al pasar por encima */
+    position: absolute; /* Posiciona de manera absoluta */
+    top: 50%; /* Alinea verticalmente al centro */
+    width: auto; /* Ancho automático */
+    margin-top: -22px; /* Margen superior negativo para centrar */
+    padding: 16px; /* Espacio interno */
+    color: white; /* Color de texto blanco */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 18px; /* Tamaño de fuente */
+    transition: 0.6s ease; /* Transición suave */
+    user-select: none; /* Evita la selección de texto */
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    border: none; /* Sin borde */
+    z-index: 1; /* Asegura que los botones estén por encima de las diapositivas */
+}
+
+/* Estilo para el botón de navegación izquierda */
+.prev {
+    left: 0; /* Alinea a la izquierda */
+}
+
+/* Estilo para el botón de navegación derecha */
+.next {
+    right: 0; /* Alinea a la derecha */
+}
+
+/* Estilo para el carrusel */
+.carrusel {
+    overflow: hidden; /* Oculta el contenido que desborda */
+    white-space: nowrap; /* Impide el salto de línea de los elementos en línea */
+}
+
+/* Estilo para el contenido del carrusel */
+.carrusel-content {
+    display: flex; /* Utiliza flexbox para el contenido del carrusel */
+    transition: transform 0.5s ease-in-out; /* Transición suave para las transformaciones */
+}
+
+/* Estilo para las imágenes dentro del carrusel */
+.carrusel-content img {
+    display: inline-block; /* Asegura que las imágenes se mantengan en línea */
+    width: 100px; /* Ajusta el ancho de las imágenes según sea necesario */
+    margin: 0 5px; /* Espacio entre las imágenes */
+}
+
+/* Estilo para centrar el listado de conocimientos */
+.centrar-lista {
+    display: flex; /* Utiliza flexbox para el contenedor */
+    flex-direction: column; /* Organiza los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    padding: 0; /* Elimina el padding predeterminado */
+    list-style: none; /* Elimina el estilo de lista por defecto */
+}
+
+/* Estilo para los elementos de la lista centrada */
+.centrar-lista li {
+    margin: 5px 0; /* Añade un margen entre los elementos de la lista */
+}
+
+/* Estilo para el contenedor del validador de RUT */
+#validador-rut {
+    display: flex; /* Utiliza flexbox para el contenedor */
+    justify-content: center; /* Centra el validador horizontalmente */
+    align-items: center; /* Centra el validador verticalmente */
+    flex-direction: column; /* Alinea los elementos en columna */
+    margin-top: 20px; /* Margen superior */
+}
+
+/* Estilo para el contenedor principal del validador de RUT */
+#validador {
+    background-color: #24ad68; /* Color de fondo del validador */
+    border-radius: 10px; /* Bordes redondeados */
+    padding: 20px; /* Espacio interno */
+    color: white; /* Color del texto */
+    max-width: 300px; /* Ancho máximo del validador */
+    margin: auto; /* Centra el validador */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para el validador */
+    text-align: center; /* Centra el texto */
+}
+
+/* Estilo para el campo de entrada del RUT */
+#validador input {
+    margin: 5px 0; /* Espacio entre el campo de entrada */
+    padding: 10px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+    border: none; /* Sin borde */
+    text-align: center; /* Centra el texto */
+    width: calc(100% - 20px); /* Ancho ajustado para evitar pegarse al borde */
+}
+
+/* Estilo para el botón del validador de RUT */
+#validador button {
+    background-color: #57c2c2; /* Color de fondo del botón */
+    color: white; /* Color del texto del botón */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espacio interno */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Estilo para el botón del validador de RUT cuando se pasa el ratón */
+#validador button:hover {
+    background-color: #056e13; /* Color de fondo del botón al pasar el ratón */
+}
+
+/* Estilo para el resultado del validador de RUT */
+#resultado-rut {
+    margin-top: 10px; /* Margen superior */
+    font-size: 18px; /* Tamaño de fuente */
+}
+
+/* Estilo para el pie de página */
+footer {
+    background-color: #1a1a1a; /* Color de fondo oscuro para el pie de página */
+    color: #fff; /* Color de texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 10px 0; /* Espacio interno vertical */
+    position: fixed; /* Fija el pie de página en la parte inferior */
+    width: 100%; /* Ancho completo */
+    bottom: 0; /* Posiciona el pie de página en la parte inferior */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5); /* Sombra para el pie de página */
+}
+
+/* Estilo para el texto del pie de página */
+footer p {
+    margin: 0; /* Elimina los márgenes */
+    font-family: 'Comic Neue', cursive; /* Aplica la fuente divertida */
+}
+
+/* Papel tapiz */
+
+/* Definición de la animación para mover el fondo */
+@keyframes moveBackground {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+}
+
+/* Aplicación de la animación a las secciones */
+#intereses, #lenguajes, #conocimientos, #validador-rut {
+    background: url('../img/papel-tapiz.jpg') repeat; /* Imagen de fondo que se repite */
+    background-size: cover; /* Asegura que la imagen cubra toda el área del fondo */
+    background-attachment: fixed; /* Fija la posición del fondo */
+    text-align: center; /* Centra el texto y el contenido dentro de la sección */
+    padding: 20px; /* Espacio interno */
+    animation: moveBackground 20s linear infinite; /* Aplica la animación */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para la sección */
+    will-change: background-position; /* Sugerir al navegador que optimice la animación de la posición del fondo */
+}
+
+/* Ajustar tamaño de imágenes en "Mis Intereses" */
+#intereses .slide img {
+    width: 100%; /* Ancho del 100% del contenedor */
+    max-width: 300px; /* Ancho máximo de 300px */
+    height: auto; /* Altura automática para mantener la proporción */
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+}
+
+/* Ajustar tamaño de imágenes en "Mis Lenguajes" */
+#lenguajes .carrusel-content img {
+    width: 200px; /* Ancho fijo */
+    height: 200px; /* Altura fija */
+    object-fit: contain; /* Mantiene la proporción dentro del área especificada */
+    margin: 10px; /* Añade un margen alrededor de las imágenes */
+}
+
+/* Estilos para el botón "Más información" en la sección "Mis Intereses" */
+#intereses .slide button {
+    background-color: #69c3ff; /* Color de fondo rosado */
+    color: white; /* Color del texto blanco */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espacio interno */
+    cursor: pointer; /* Cursor de puntero */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+/* Estilo para el botón "Más información" cuando se pasa el ratón */
+#intereses .slide button:hover {
+    background-color: #ff0000; /* Color de fondo rojo al pasar el ratón */
+}

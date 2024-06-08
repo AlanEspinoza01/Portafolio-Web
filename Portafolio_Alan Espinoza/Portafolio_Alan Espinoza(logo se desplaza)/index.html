@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!-- Declaración del tipo de documento como HTML5 y se establece el idioma a español -->
+<head>
+    <meta charset="UTF-8">
+    <!-- Establece la codificación de caracteres a UTF-8 para soportar caracteres especiales -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura el viewport para asegurar que la página se vea bien en dispositivos móviles -->
+    <title>Portafolio Web de Alan Espinoza</title>
+    <!-- Título de la página que se muestra en la pestaña del navegador -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Enlace a la hoja de estilos CSS externa -->
+</head>
+<body>
+    <!-- Inicio del cuerpo del documento -->
+    <header>
+        <!-- Inicio de la cabecera del documento -->
+        <div class="logo">
+            <!-- Contenedor para el logo -->
+            <img src="img/LogoA.png" alt="Logo de Alan" id="logo">
+            <!-- Imagen del logo con su respectiva descripción alternativa y un ID -->
+        </div>
+        <div class="contacto" id="contacto"></div>
+        <!-- Contenedor para la sección de contacto, actualmente vacío pero con un ID para su posterior uso -->
+    </header>
+
+    <!-- Sección de Intereses -->
+    <main>
+        <!-- Inicio del contenido principal del documento -->
+        <section id="intereses">
+            <!-- Sección dedicada a los intereses con un ID específico -->
+            <h2>Mis Intereses</h2>
+            <!-- Encabezado de segundo nivel para la sección de intereses -->
+            <div class="slider">
+                <!-- Contenedor para el slider de intereses -->
+                <button class="prev">❮</button>
+                <!-- Botón para retroceder en el slider -->
+                <div class="slider-content">
+                    <!-- Contenedor para el contenido del slider -->
+                    <div class="slide">
+                        <!-- Elemento individual del slider -->
+                        <img src="img/interes1.jpg" alt="Interes 1">
+                        <!-- Imagen representativa del primer interés con descripción alternativa -->
+                        <p>Me gusta el Shitposter</p>
+                        <!-- Descripción del primer interés -->
+                        <button onclick="window.open('https://pt.memedroid.com/memes/detail/3094818/Jajajaj-no-les-sale-el-shitpost')">Más información</button>
+                        <!-- Botón que abre una nueva ventana con más información sobre el primer interés -->
+                    </div>
+                    <div class="slide">
+                        <!-- Elemento individual del slider -->
+                        <img src="img/interes2.jpg" alt="Interes 2">
+                        <!-- Imagen representativa del segundo interés con descripción alternativa -->
+                        <p>Me encanta cocinar</p>
+                        <!-- Descripción del segundo interés -->
+                        <button onclick="window.open('https://tasty.co/')">Más información</button>
+                        <!-- Botón que abre una nueva ventana con más información sobre el segundo interés -->
+                    </div>
+                    <div class="slide">
+                        <!-- Elemento individual del slider -->
+                        <img src="img/interes3.jpg" alt="Interes 3">
+                        <!-- Imagen representativa del tercer interés con descripción alternativa -->
+                        <p>Hago deporte 5 veces por semana</p>
+                        <!-- Descripción del tercer interés -->
+                        <button onclick="window.open('https://www.gimnasioseven.com/')">Más información</button>
+                        <!-- Botón que abre una nueva ventana con más información sobre el tercer interés -->
+                    </div>
+                </div>
+                <button class="next">❯</button>
+                <!-- Botón para avanzar en el slider -->
+            </div>
+        </section>
+
+        <!-- Sección de Lenguajes -->
+        <section id="lenguajes">
+            <!-- Sección dedicada a los lenguajes con un ID específico -->
+            <h2>Mis Lenguajes</h2>
+            <!-- Encabezado de segundo nivel para la sección de lenguajes -->
+            <div class="carrusel">
+                <!-- Contenedor para el carrusel de lenguajes -->
+                <div class="carrusel-content">
+                    <!-- Contenedor para el contenido del carrusel -->
+                    <img src="img/lenguaje1.png" alt="HTML">
+                    <!-- Imagen representativa del primer lenguaje (HTML) con descripción alternativa -->
+                    <img src="img/lenguaje2.png" alt="JS">
+                    <!-- Imagen representativa del segundo lenguaje (JS) con descripción alternativa -->
+                    <img src="img/lenguaje3.png" alt="CSS">
+                    <!-- Imagen representativa del tercer lenguaje (CSS) con descripción alternativa -->
+                    <img src="img/lenguaje4.png" alt="MongoDB">
+                    <!-- Imagen representativa del cuarto lenguaje (MongoDB) con descripción alternativa -->
+                    <img src="img/lenguaje5.png" alt="Python">
+                    <!-- Imagen representativa del quinto lenguaje (Python) con descripción alternativa -->
+                    <img src="img/lenguaje6.png" alt="SQL">
+                    <!-- Imagen representativa del sexto lenguaje (SQL) con descripción alternativa -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Conocimientos -->
+        <section id="conocimientos">
+            <!-- Sección dedicada a los conocimientos con un ID específico -->
+            <h2>Mis Conocimientos</h2>
+            <!-- Encabezado de segundo nivel para la sección de conocimientos -->
+            <ul id="lista-conocimientos" class="centrar-lista"></ul>
+            <!-- Lista de conocimientos, inicialmente vacía, con una clase para centrarla -->
+        </section>
+
+        <!-- Sección de Validador de RUT Chileno -->
+        <section id="validador-rut">
+            <!-- Sección dedicada al validador de RUT con un ID específico -->
+            <h2>Validador de RUT Chileno</h2>
+            <!-- Encabezado de segundo nivel para la sección de validador de RUT -->
+            <p>Introduce un RUT chileno para verificar su validez</p>
+            <!-- Párrafo explicativo sobre cómo utilizar el validador de RUT -->
+            <div id="validador">
+                <!-- Contenedor principal para el validador -->
+                <input type="text" id="rut" placeholder="Ej: 12345678-9">
+                <!-- Campo de entrada para el RUT -->
+                <button type="button" onclick="validarRUT()">Validar RUT</button>
+                <!-- Botón que activa la función de validar el RUT al hacer clic -->
+                <p id="resultado-rut"></p>
+                <!-- Párrafo vacío que se llenará con el resultado de la validación -->
+            </div>
+        </section>
+    </main>
+
+    <script src="js/scripts.js"></script>
+    <!-- Enlace al archivo JavaScript externo -->
+
+    <footer>
+        <!-- Inicio del pie de página -->
+        Pagina creada por Alan Espinoza
+        <!-- Texto del pie de página -->
+    </footer>
+</body>
+</html>
+
